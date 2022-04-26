@@ -1,15 +1,7 @@
-import Post from "../container/Post";
+import Post from "../container/Post/Post";
 
 const HomePage = ()=>{
     return <>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
         <Post />
     </>
 }

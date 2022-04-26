@@ -1,0 +1,70 @@
+
+.Interactions{
+    width: 100%;
+    height: 10%;
+    background: rgb(26, 25, 25) ;
+    display: flex;
+}
+
+.Interactions__Actions, .Interactions__Counter{
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Interactions__Actions p{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.Actions__Likes, .Actions__Comments, .Actions__Shares{
+    padding:5px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.Actions__Likes p, .Actions__Comments p, .Actions__Shares p{
+    margin-left: 10px;
+}
+
+
+.Actions__Likes:hover, .Actions__Comments:hover, .Actions__Shares:hover{
+    transition: .5s;
+    cursor: pointer;
+    background: rgb(68, 65, 65);
+}
+
+.Counter__Likes, .Counter__Comments, .Counter__Shares{
+    display: flex;
+    cursor: pointer;
+}
+
+.Counter__Likes p{
+    margin-left: 5px;
+}
+
+.Counter__Likes p, .Counter__Comments p, .Counter__Shares p{
+    display: flex;
+    font-size: 12px;
+
+}
+
+@media (max-width: 750px) {
+    .Interactions{
+        flex-direction: column;
+    }
+
+    .Interactions__Actions{
+        width: 100%;
+    }
+
+    .Interactions__Counter{
+        width: 100%;
+    }
+}

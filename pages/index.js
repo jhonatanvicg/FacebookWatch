@@ -1,4 +1,4 @@
-import Post from "../container/Post/Post";
+import Post from "../container/Post";
 
 const HomePage = ()=>{
     return <>

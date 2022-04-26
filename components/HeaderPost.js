@@ -1,6 +1,6 @@
 import {FaGlobeAmericas} from "react-icons/fa";
 import {FaEllipsisH} from "react-icons/fa";
-import styles from "./HeaderPost.module.css";
+import styles from "../styles/components/HeaderPost.module.css";
 
 const HeaderPost = () => {
     return ( 

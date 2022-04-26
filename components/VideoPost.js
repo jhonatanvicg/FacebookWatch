@@ -1,9 +1,11 @@
 import styles from "../styles/components/VideoPost.module.css"
 
-const VidepPost = () => {
+const VidepPost = ({ videoLink }) => {
+    
+    
     return ( 
         <div className={styles.video}>
-            <video src=""></video>
+            <video src={videoLink}></video>
         </div>
      );
 }

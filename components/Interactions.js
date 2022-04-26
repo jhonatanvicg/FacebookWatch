@@ -3,7 +3,24 @@ import { AiFillLike } from "react-icons/ai";
 
 import styles from '../styles/components/Interactions.module.css';
 
-const Interactions = () => {
+const Interactions = ({ comments, share, likes}) => {
+
+
+    const valuesString = (value,typeData)=>{
+        let lengthNumber = value.toString().split('').length;
+        let visibleNumber = ''
+        if(lengthNumber<=3){
+            visibleNumber = lengthNumber + " " + typeData
+        }else if(lengthNumber <=6){
+            visibleNumber = lengthNumber +  " k " + typeData
+        }else{
+            visibleNumber = lengthNumber +  " mill " + typeData
+        }
+        
+        return visibleNumber;
+    }
+
+
     return ( 
         <div className={styles.interactions}>
             <div className={styles.interactions__actions}>
@@ -27,13 +44,25 @@ const Interactions = () => {
             <div className={styles.interactions__counter}>
                 <div className={styles.counter__likes}>
                     <AiFillLike color="white" />
-                    <p>35 Mil</p>
+                    <p>
+                        {
+                            valuesString(likes, "Likes")
+                        }
+                    </p>
                 </div>
                 <div className={styles.counter__comments}>
-                    <p>155 Comentarios</p>
+                    <p>
+                        {
+                            valuesString(comments, "comments")
+                        }
+                    </p>
                 </div>
                 <div className={styles.counter__shares}>
-                    <p>962 mil reproducciones</p>
+                    <p>
+                        {
+                            valuesString(share, "reproductions")
+                        }
+                    </p>
                 </div>
             </div>
         </div>

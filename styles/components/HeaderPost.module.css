@@ -28,7 +28,7 @@
 .PageData__ProfilePicture img{
     object-fit: fill;
     width: 35px;
-    height: 100%;
+    height: 90%;
     border-radius: 50%;
 }
 
@@ -37,7 +37,6 @@
 }
 .MainInfo__Up, .MainInfo__Down{
     width: 100%;
-    height: 50%;
 }
 
 .Up__PageName{
@@ -58,6 +57,7 @@
     font-weight: 700;
     font-size: 15px;
     color: rgb(0, 68, 255);
+    cursor: pointer;
 }
 
 .Down__Date{
@@ -80,6 +80,18 @@
     align-items: center;
     width: 10%;
     cursor: pointer;
+    
+}
+
+.PageData__OptionsDots{
+    transition: .2s;
+}
+
+.PageData__OptionsDots:hover{
+    transition: .2s;
+    background: rgba(81, 81, 82, 0.623);
+    padding: 2px;
+    border-radius: 50%;
 }
 
 .Header__Description{
@@ -91,7 +103,7 @@
 
 .Header__Description p{
     text-overflow: ellipsis;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
 }
 

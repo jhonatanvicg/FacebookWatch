@@ -13,5 +13,255 @@ body{
 }
 
 
+.containerPosts{
+    width: 50vw;
+    border: 1px solid white;
+    height: 500px;
+}
 
 
+
+/*styles for desktop */
+@media (max-width: 1292px) {
+    .containerPosts{
+        width: 70vw;
+    }
+
+}
+
+@media (max-width:1000px){
+    .containerPosts{
+        width: 90vw;
+    }
+}
+
+/*----------------------------*/
+
+
+/*styles for tables*/
+
+@media (max-width: 750px) {
+    .containerPosts{
+        width: 100VW;
+    }
+}
+/*----------------------------*/
+
+
+.post{
+    margin-top: 10px;
+    border: 1px solid rgb(24, 23, 23);
+    height: 500px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.Header{
+    color: white;
+    height: 20%;
+    background: rgb(26, 25, 25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Header__PageData{
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+
+.PageData__ProfilePicture{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PageData__ProfilePicture img{
+    object-fit: fill;
+    width: 35px;
+    height: 90%;
+    border-radius: 50%;
+}
+
+.PageData__MainInfo{
+    width: 80%;
+}
+.MainInfo__Up, .MainInfo__Down{
+    width: 100%;
+}
+
+.Up__PageName{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Up__PageName p:nth-child(1){
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+
+.Up__PageName p:nth-child(2){
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(0, 68, 255);
+    cursor: pointer;
+}
+
+.Down__Date{
+    margin-top: 2px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Down__Date p{
+    margin-right: 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.PageData__Options{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    cursor: pointer;
+    
+}
+
+.PageData__OptionsDots{
+    transition: .2s;
+}
+
+.PageData__OptionsDots:hover{
+    transition: .2s;
+    background: rgba(81, 81, 82, 0.623);
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.Header__Description{
+    padding: 1px;
+    margin: 10px 0;
+    width: 95%;
+    overflow: hidden;
+}
+
+.Header__Description p{
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 750px) {
+
+    .Header__PageData{
+        width: 99%;
+    }
+}
+
+
+
+.interactions{
+    width: 100%;
+    height: 10%;
+    background: rgb(26, 25, 25) ;
+    display: flex;
+    align-items: center;
+}
+
+.interactions__actions, .interactions__counter{
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.interactions__actions p{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.actions__likes, .actions__comments, .actions__shares{
+    padding:5px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.actions__likes p, .actions__comments p, .actions__shares p{
+    margin-left: 10px;
+}
+
+
+.actions__likes:hover, .actions__comments:hover, .actions__shares:hover{
+    transition: .5s;
+    cursor: pointer;
+    background: rgb(68, 65, 65);
+}
+
+.counter__likes, .counter__comments, .counter__shares{
+    display: flex;
+    cursor: pointer;
+}
+
+.counter__likes p{
+    margin-left: 5px;
+}
+
+.counter__likes p, .counter__comments p, .counter__shares p{
+    display: flex;
+    font-size: 12px;
+
+}
+
+
+
+@media (max-width: 750px) {
+    .interactions__line{
+        margin: 1px 0;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.253);
+    }
+    
+    .interactions{
+        flex-direction: column;
+    }
+
+    .interactions__actions{
+        width: 100%;
+    }
+
+    .interactions__counter{
+        width: 100%;
+    }
+}
+
+.video{
+    height: 70%;
+    width: 100%;
+}
+
+.videoFile{
+    width: 100%;
+    height: 100%;
+}

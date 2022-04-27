@@ -2,35 +2,9 @@
     margin-top: 10px;
     border: 1px solid rgb(24, 23, 23);
     height: 500px;
-    width: 50vw;
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 
-
-/*styles for desktop */
-@media (max-width: 1292px) {
-    .post{
-        width: 70vw;
-    }
-
-}
-
-@media (max-width:1000px){
-    .post{
-        width: 90vw;
-    }
-}
-
-/*----------------------------*/
-
-
-/*styles for tables*/
-
-@media (max-width: 750px) {
-    .post{
-        width: 100VW;
-    }
-}
-/*----------------------------*/

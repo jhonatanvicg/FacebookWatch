@@ -23,7 +23,7 @@ const HomePage = ()=>{
                 console.log(response)
                 response.videos.forEach((el)=>{
                     let randomVideoValue = Math.floor(Math.random()* 16)
-                    if( response.videos[randomVideoValue].video_files != undefined){
+                    if( response.videos[randomVideoValue] != undefined){
                         console.log(response.videos[Math.floor(Math.random()* 16)])
                         tempArrVideos.push(response.videos[randomVideoValue].video_files[0].link)
                     }

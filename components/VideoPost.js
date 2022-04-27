@@ -3,7 +3,6 @@ import styles from "../styles/components/VideoPost.module.css"
 
 const VidepPost = ({ videoLink }) => {
     
-    console.log(videoLink)
     return ( 
         <div className={styles.video}>
             <ReactPlayer 

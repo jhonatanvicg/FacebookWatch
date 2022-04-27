@@ -2,7 +2,7 @@ import Post from "../container/Post";
 import axios from "../hooks/useAxios"
 import request from "../hooks/useRequest";
 import { createClient } from 'pexels';
-const query = 'Nature';
+const query = ['Nature','Dogs','Cats','Animals','People','Sea','Funny'];
 import { useEffect,useState } from "react";
 
 const HomePage = ()=>{
@@ -16,8 +16,19 @@ const HomePage = ()=>{
             const answer = await axios.get(request.fetchPosts)
             setPosts(answer.data.data)
             
-            client.videos.search({ query}).then(response => {
-                setUrlVideos(response.videos[0].video_files[0].link)
+            let genre = query[Math.floor(Math.random() * 8 )]
+            console.log("este es ek gn}enero:",genre)
+            client.videos.search({query:genre}).then(response => {
+                let tempArrVideos = [];
+                console.log(response)
+                response.videos.forEach((el)=>{
+                    let randomVideoValue = Math.floor(Math.random()* 16)
+                    if( response.videos[randomVideoValue].video_files != undefined){
+                        console.log(response.videos[Math.floor(Math.random()* 16)])
+                        tempArrVideos.push(response.videos[randomVideoValue].video_files[0].link)
+                    }
+                })
+                setUrlVideos(tempArrVideos)
             });
         }
         getData()
@@ -28,11 +39,11 @@ const HomePage = ()=>{
 
     return <>
         {
-            posts == '' && urlVideos == '' ? null :
+            posts == '' || urlVideos == '' ? null || urlVideos== undefined :
             posts.map((page,index)=>(
                 <Post
                     key={index}
-                    videoLink={urlVideos}
+                    videoLink={urlVideos[index]}
                     pageName={page.pageName} 
                     comments={page.comments} 
                     date={page.date} 

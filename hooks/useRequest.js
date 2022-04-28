@@ -1,5 +1,5 @@
 const request = {
-    "fetchPosts":"posts/"
+    fetchPosts:"/posts"
 }
 
 export default request;

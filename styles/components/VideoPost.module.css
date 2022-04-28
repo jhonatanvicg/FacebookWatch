@@ -1,3 +1,13 @@
 .video{
-    height: 70%;
+    overflow: hidden;
+    width: 100%;
+    height:auto ;
+    margin: 0px;
+}
+
+.video video{
+   width: max-content;
+   max-width: 100%;
+   max-height: 103%;
+   min-width: 200px;
 }

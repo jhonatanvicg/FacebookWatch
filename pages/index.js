@@ -13,8 +13,22 @@ const HomePage = ()=>{
     const [urlVideos, setUrlVideos] = useState('')
     useEffect(()=>{
          async function getData(){
-            const answer = await axios.get(request.fetchPosts)
-            setPosts(answer.data.data)
+    
+             try {        
+                 const answer = await axios.post(request.fetchPosts,{
+                        sizes:30,
+                        max_comments:60,
+                        min_comments:5,
+                        max_likes:80,
+                        min_likes:8,
+                        max_shares:80,
+                        min_shares:8,
+                 })
+                 setPosts(answer.data.data)
+             } catch (error) {
+                 console.log(error);
+                 setPosts([]);
+             }
             
             client.videos.search({ query}).then(response => {
                 setUrlVideos(response.videos[0].video_files[0].link)

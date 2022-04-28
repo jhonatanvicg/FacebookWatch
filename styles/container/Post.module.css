@@ -1,7 +1,7 @@
 .post{
     margin-top: 10px;
     border: 1px solid rgb(24, 23, 23);
-    height: 500px;
+    height: min-content;
     width: 50vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

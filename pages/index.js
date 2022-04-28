@@ -85,8 +85,8 @@ const HomePage = ()=>{
     
     useEffect(()=>{
         if(window !=undefined){
-            //let observer = new IntersectionObserver(onIntersect, intersectionOptions)
-            //observer.observe(targetObserver.current)
+            let observer = new IntersectionObserver(onIntersect, intersectionOptions)
+            observer.observe(targetObserver.current)
 
         }
         getData()
@@ -112,8 +112,8 @@ const HomePage = ()=>{
             //<div ref={containerPosts} className="containerPosts">
 
           //  </div>
-        //<div ref={targetObserver} className="targetObserver"></div>
         }
+        <div ref={targetObserver} className="targetObserver"></div>
         
     </>
 }
